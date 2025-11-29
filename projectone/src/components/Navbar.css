@@ -31,3 +31,17 @@
   color: var(--color-text-primary);
   background-color: var(--color-surface-soft);
 }
+.cartposition{
+  position: relative;
+}
+.cartnumber{
+  background-color: blue;
+  padding: 2px 4px;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  font-size: 12px;
+  font-weight: 600;
+  top: -5%;
+  right: 0;
+}

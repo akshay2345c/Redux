@@ -1,13 +1,15 @@
 import { useEffect } from "react";
 import "./Products.css";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../Redux/ProductsSlice"; // ⭐ IMPORT THIS
-
+import { fetchProducts } from "../Redux/ProductsSlice";
+import { addProduct, removeProduct } from "../Redux/CartSlice";
 function Products() {
   const dispatch = useDispatch();
 
   // ⭐ GET DATA FROM REDUX STATE
   const { products, loading, error } = useSelector((state) => state.products);
+  
+  const cartProducts = useSelector((state) => state.Cart.products)
 
   // ⭐ FETCH API ONCE WHEN COMPONENT MOUNTS
   useEffect(() => {
@@ -48,9 +50,23 @@ function Products() {
                 </p>
                 <p className="product-card__price">${product.price}</p>
               </div>
-              <button className="product-card__button" type="button">
-                Add to cart
-              </button>
+              {cartProducts.some((item) => item.id === product.id) ? (
+                <button 
+                  onClick={() => dispatch(removeProduct(product))} 
+                  className="product-card__button product-card__button--remove" 
+                  type="button"
+                >
+                  Remove from cart
+                </button>
+              ) : (
+                <button 
+                  onClick={() => dispatch(addProduct(product))} 
+                  className="product-card__button product-card__buttonAdd" 
+                  type="button"
+                >
+                  Add to cart
+                </button>
+              )}
             </article>
           ))}
       </div>

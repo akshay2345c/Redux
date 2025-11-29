@@ -102,17 +102,29 @@
   padding: 0.6rem 1rem;
   border-radius: 999px;
   border: none;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  
   color: #ffffff;
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
 }
 
+.product-card__buttonAdd {
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  
+}
 .product-card__button:hover {
-  background: linear-gradient(135deg, #1d4ed8, #1e40af);
-  box-shadow: 0 10px 18px rgba(37, 99, 235, 0.35);
-  transform: translateY(-1px);
+  background-color: #4338ca;
+}
+
+.product-card__button--remove {
+  background-color: #dc2626 !important;
+  
+}
+
+.product-card__button--remove:hover {
+  background-color: #b91c1c;
 }
 
 .product-card__button:active {
