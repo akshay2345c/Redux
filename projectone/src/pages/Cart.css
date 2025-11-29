@@ -1,0 +1,10 @@
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.page__description {
+  margin-top: var(--space-md);
+  color: var(--color-text-muted);
+}
