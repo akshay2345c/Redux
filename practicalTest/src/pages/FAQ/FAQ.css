@@ -1,0 +1,29 @@
+.faq-page {
+  padding: var(--spacing-xl);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.faq-header {
+  margin-bottom: var(--spacing-2xl);
+  text-align: center;
+}
+
+.faq-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text);
+  margin-bottom: var(--spacing-md);
+}
+
+.faq-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+}
+
+.faq-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
